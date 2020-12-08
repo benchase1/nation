@@ -3,6 +3,7 @@ Nation Simulator is a command line simulation game focused on building a fiction
 
 ## Latest Release Information
 **Current Version:** 1.4.2
+
 **Release Date:** 7 December 2020
 
 ## Pre-requisites
@@ -10,8 +11,7 @@ Nation Simulator is a command line simulation game focused on building a fiction
 - Latest GitHub CLI
 
 ## Installation
-**Step 1:** Clone repository to your computer.
-`gh repo clone benchase1/nation`
+**Step 1:** Clone repository to your computer with `gh repo clone benchase1/nation`
 
 **Step 2:** `cd nation`
 
@@ -64,9 +64,11 @@ Choice:
 If you have multiple towns, all towns will appear in the list. The only option I can pick is `1`, so I'll enter `1`.
 
 You will be prompted to enter a new town name, I chose New Hardwick.
+
 `Enter new town name:`
 
 You will be prompted to enter a new town population. This subtracts from the current town population, `2990` for me. I entered `400` to start off with.
+
 `Enter new town population:`
 
 Your new town will pop up in your town list. My current list:
@@ -79,6 +81,7 @@ Name: New Hardwick | State: no state | District: no district | Population: 400
 ```
 ### Merging Towns
 When you have two or more towns a new option shows up.
+
 `4. Merge towns`
 
 I created a new town out of Hardwick named Old Hardwick, with population 400, and I'll merge that with New Hardwick.
@@ -100,18 +103,23 @@ Select town to add
 Choice: 
 ```
 Old Hardwick has been removed, and the entry for New Hardwick is this:
+
 `Name: New Hardwick | State: no state | District: no district | Population: 800`
 ### States
 When the year reaches 2015, you are able to create a state, with this new option:
+
 `5. Create state`
 
 You will be prompted to name the state. I chose to name mine Massachusetts.
+
 `Enter state name: `
 
 You will be prompted to enter a state abbreviation. Mine will be MA.
+
 `Enter state abbreviation: `
 
 You will be prompted to enter the amount of towns in the state. Any number greater than the current town amount will result in an error. Since I want Hardwick and New Hardwick both in Massachusetts, I entered 2.
+
 `Enter amount of towns: `
 
 You will be prompted to choose the towns. You must enter the number next to the town. No order is necessary.
@@ -129,6 +137,18 @@ Name: Massachusetts | Abbreviation: MA | Population: 3145
 State abbreviations have been added in the town list for affected towns.
 
 Towns can also be added to states in a similar way by choosing option 6, and selecting the intended state and town.
+
+When states are created, you get an info page to go along with it. Here is my current info page:
+```
+State: Massachusetts
+Population: 3145
+Towns in State:
+Name: Hardwick | District: no district | Population: 2298
+Name: New Hardwick | District: no district | Population: 847
+Governor: Ben Chase
+Votes: 1433 - 772
+Election Year: 2015
+```
 ### Districts
 When the year reaches 2020, you can add districts, by selecting option 9. Districts are very similar to states, but have a uniform naming scheme, being `<state abbreviation>-<number>`. `<number>` counts up from 1 for each state.
 
@@ -141,8 +161,19 @@ Name: MA-1 | State: MA | Population: 2406
 ```
 District names have been added in the town list for affected towns.
 ### Elections
-States may elect governors and districts may elect representatives after the state or district has been created. I chose to elect a governor to Massachusetts.
+States may elect governors and districts may elect representatives after the state or district has been created. I chose to elect a governor to Massachusetts by chossing option 8 and selecting Massachusetts.
 
-States and districts automatically elect when they are initally created.
+States and districts automatically elect when they are initally created. District elections can be held every 2 years, and state elections can be held every 5 years. Results can be found on the state or district info page.
 
-*This will currently not be covered due to a bug found in version 1.4.2 while writing this. Version 1.4.3 will fix said bug.*
+### Changelog
+Choosing option 97 will load up the game's changelog, where you can view how the game progressed since version 0.1 released on 30 October 2020. Dates are not included.
+
+For instance, GitHub support was added in version 1.4.2. This is the entry for version 1.4.2:
+```
+Version 1.4.2
+- GitHub release!
+```
+### Saving
+You can save your game by choosing option 98. After a short wait, you will recieve a 4 digit save code, such as `1259`. This code, along with your system date and time will appear in the start menu next time you start up the game.
+
+Option 99 will exit the game without saving.
