@@ -1,6 +1,7 @@
 import java.text.*;
 import java.util.*;
 import java.io.*;
+import java.lang.Math.*;
 public class nation
 {
 
@@ -55,7 +56,7 @@ public class nation
     }
 
     System.out.println("Nation Simulator");
-    System.out.println("Version 1.4.2");
+    System.out.println("Version 1.4.3");
     System.out.println("-----------------------------------------------------------------------");
 
     System.out.println("Saves:");
@@ -64,7 +65,8 @@ public class nation
       System.out.println(saveCodes.get(i) + " - " + saveLastModified.get(i));
     }
 
-    System.out.print("Enter 1 to start a new game, or enter save code: ");
+    System.out.println("Enter 1 to start a new game, or enter save code");
+    System.out.print("Choice: ");
     int save = in.nextInt();
 
     System.out.println("-----------------------------------------------------------------------");
@@ -672,6 +674,11 @@ public class nation
             System.out.println("Governor: " + electionWin.get(i));
             System.out.println("Votes: " + winVotes.get(i) + " - " + loseVotes.get(i));
             System.out.println("Election Year: " + electionYear.get(i));
+            double totalVotes = winVotes.get(i) + loseVotes.get(i);
+            double turnout = totalVotes / playerStatesPop.get(stateView);
+            turnout = 100.0 * turnout;
+            turnout = Math.round(turnout * 100.0) / 100.0;
+            System.out.println("Turnout: " + turnout + "%");
           }
         }
 
@@ -857,6 +864,11 @@ public class nation
             System.out.println("Representative: " + electionWin.get(i));
             System.out.println("Votes: " + winVotes.get(i) + " - " + loseVotes.get(i));
             System.out.println("Election Year: " + electionYear.get(i));
+            double totalVotes = winVotes.get(i) + loseVotes.get(i);
+            double turnout = totalVotes / playerDistrictsPop.get(districtView);
+            turnout = 100.0 * turnout;
+            turnout = Math.round(turnout * 100.0) / 100.0;
+            System.out.println("Turnout: " + turnout + "%");
           }
         }
 

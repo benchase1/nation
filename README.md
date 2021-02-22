@@ -2,9 +2,9 @@
 Nation Simulator is a command line simulation game focused on building a fictional nation. Starting with just one town, you can expand and gain more towns, eventually unifying the towns into states and districts within each state.
 
 ## Latest Release Information
-**Current Version:** 1.4.2
+**Current Version:** 1.4.3
 
-**Release Date:** 7 December 2020
+**Release Date:** 22 February 2021
 
 ## Pre-requisites
 - Latest Java Development Kit (JDK)
@@ -20,10 +20,10 @@ Nation Simulator is a command line simulation game focused on building a fiction
 If all goes well, you should see a screen looking like this:
 ```
 Nation Simulator
-Version 1.4.2
+Version 1.4.3
 -----------------------------------------------------------------------
 Saves:
-Enter 1 to start a new game, or enter save code: 
+Enter 1 to start a new game, or enter save code:
 ```
 Note that a fresh installation has no games saved.
 
@@ -59,7 +59,7 @@ Press `3` to split a town.
 ```
 Select town to split from
 1. Hardwick
-Choice: 
+Choice:
 ```
 If you have multiple towns, all towns will appear in the list. The only option I can pick is `1`, so I'll enter `1`.
 
@@ -92,7 +92,7 @@ Select town to merge to
 1. Hardwick
 2. New Hardwick
 3. Old Hardwick
-Choice: 
+Choice:
 ```
 You will be prompted to choose the town that goes away after the merge. For me, this is 3.
 ```
@@ -100,7 +100,7 @@ Select town to add
 1. Hardwick
 2. New Hardwick
 3. Old Hardwick
-Choice: 
+Choice:
 ```
 Old Hardwick has been removed, and the entry for New Hardwick is this:
 
@@ -148,6 +148,7 @@ Name: New Hardwick | District: no district | Population: 847
 Governor: Ben Chase
 Votes: 1433 - 772
 Election Year: 2015
+Turnout: 70.11%
 ```
 ### Districts
 When the year reaches 2020, you can add districts, by selecting option 9. Districts are very similar to states, but have a uniform naming scheme, being `<state abbreviation>-<number>`. `<number>` counts up from 1 for each state.
@@ -156,7 +157,7 @@ I will not cover the district creation tool in depth, since it is similar to the
 
 I now have a new list after adding Hardwick to a new district in Massachusetts.
 ```
-Your Districts: 
+Your Districts:
 Name: MA-1 | State: MA | Population: 2406
 ```
 District names have been added in the town list for affected towns.
