@@ -2,7 +2,7 @@
 Nation Simulator is a command line simulation game focused on building a fictional nation. Starting with just one town, you can expand and gain more towns, eventually unifying the towns into states and districts within each state.
 
 ## Latest Release Information
-**Current Version:** 1.4.3
+**Current Version:** 1.4.4
 
 **Release Date:** 22 February 2021
 
@@ -20,7 +20,7 @@ Nation Simulator is a command line simulation game focused on building a fiction
 If all goes well, you should see a screen looking like this:
 ```
 Nation Simulator
-Version 1.4.3
+Version 1.4.4
 -----------------------------------------------------------------------
 Saves:
 Enter 1 to start a new game, or enter save code:
@@ -162,9 +162,9 @@ Name: MA-1 | State: MA | Population: 2406
 ```
 District names have been added in the town list for affected towns.
 ### Elections
-States may elect governors and districts may elect representatives after the state or district has been created. I chose to elect a governor to Massachusetts by chossing option 8 and selecting Massachusetts.
+States may elect governors, districts may elect representatives, and towns may elect mayors after the state, district or town has been created. I chose to elect a governor to Massachusetts by chossing option 8 and selecting Massachusetts.
 
-States and districts automatically elect when they are initally created. District elections can be held every 2 years, and state elections can be held every 5 years. Results can be found on the state or district info page.
+States, districts and towns automatically elect when they are initally created. District elections can be held every 2 years, and state and town elections can be held every 4 years. Results can be found on the state, district or town info page.
 
 ### Changelog
 Choosing option 97 will load up the game's changelog, where you can view how the game progressed since version 0.1 released on 30 October 2020. Dates are not included.
